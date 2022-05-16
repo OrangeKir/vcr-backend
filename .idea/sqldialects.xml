@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/controllers/db-layer/postgres/migrations/001_init_persons.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/controllers/db-layer/postgres/migrations/002_init_staff.sql" dialect="PostgreSQL" />
+  </component>
+</project>
