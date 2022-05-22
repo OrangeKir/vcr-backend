@@ -16,4 +16,6 @@ type CreateStaffRequest struct {
 	ContractEndDate                time.Time
 	Status                         StatusType
 	StatusChangeReason             StatusChangeReasonType
+
+	Token string
 }

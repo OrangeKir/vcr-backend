@@ -18,4 +18,6 @@ type CreatePriceStructureRequest struct {
 	ValueAddedTax       int
 	WorkPrice           int
 	PriceType           PriceType
+
+	Token string
 }

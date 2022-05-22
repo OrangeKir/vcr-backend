@@ -6,4 +6,6 @@ type UpdateDivisionInfoRequest struct {
 	DivisionName       string
 	HeadDivisionCode   int
 	DivisionSupervisor string
+
+	Token string
 }

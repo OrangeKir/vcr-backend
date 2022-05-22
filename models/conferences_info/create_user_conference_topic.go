@@ -4,4 +4,6 @@ type CreateUserConferenceTopicRequest struct {
 	ConferenceId int
 	TopicName    string
 	Login        string
+
+	Token string
 }

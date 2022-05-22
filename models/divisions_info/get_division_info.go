@@ -2,6 +2,8 @@ package divisions_info
 
 type GetDivisionInfoRequest struct {
 	DivisionCode int
+
+	Token string
 }
 
 type GetDivisionInfoResponse struct {

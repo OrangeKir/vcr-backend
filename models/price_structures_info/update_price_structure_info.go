@@ -19,4 +19,6 @@ type UpdatePriceStructureInfoRequest struct {
 	ValueAddedTax       int
 	WorkPrice           int
 	PriceType           PriceType
+
+	Token string
 }

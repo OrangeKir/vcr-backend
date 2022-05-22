@@ -4,6 +4,8 @@ import "time"
 
 type GetStaffInfoRequest struct {
 	PersonLogin string
+
+	Token string
 }
 
 type GetStaffInfoResponse struct {

@@ -2,6 +2,8 @@ package price_structures_info
 
 type GetPriceStructureInfoRequest struct {
 	Id int
+
+	Token string
 }
 
 type GetPriceStructureInfoResponse struct {
