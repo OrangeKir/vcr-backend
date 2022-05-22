@@ -1,1 +1,0 @@
-package publications_info

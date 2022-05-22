@@ -1,6 +1,6 @@
 package publications_info
 
-type CreatePublicationRequest struct {
+type CreateUsersPublicationRequest struct {
 	PublishingHouseId int
 	TopicName         string
 	AuthorsLogins     []string

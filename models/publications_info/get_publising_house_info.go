@@ -1,9 +1,10 @@
 package publications_info
 
-type GetPublishingHouseInfoRequest struct {
-	Id int
+type GetPublishingHousesInfoResponse struct {
+	PublishingHousesInfo []PublishingHouseInfo
 }
 
-type GetPublishingHouseInfoResponse struct {
-	Names []string
+type PublishingHouseInfo struct {
+	Id   int
+	Name string
 }

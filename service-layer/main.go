@@ -12,7 +12,7 @@ import (
 
 const dbConnectionString = "postgresql://postgres:1@localhost:5432/vcr"
 
-func AddDb() (*pgx.Conn, error) {
+func addDb() (*pgx.Conn, error) {
 	conn, err := pgx.Connect(context.Background(), dbConnectionString)
 	if err != nil {
 		conn.Close(context.Background())
@@ -39,7 +39,7 @@ func main() {
 	logger := initZapLog()
 	zap.ReplaceGlobals(logger)
 
-	conn, err := AddDb()
+	conn, err := addDb()
 
 	if err != nil {
 		zap.L().Fatal(err.Error())

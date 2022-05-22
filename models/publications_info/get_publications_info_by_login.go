@@ -11,7 +11,5 @@ type GetUserPublicationsInfoByLoginResponse struct {
 type Publication struct {
 	PublicationId       int
 	TopicName           string
-	PublishingHouseId   int
 	PublishingHouseName string
-	AuthorsLogins       []string
 }
