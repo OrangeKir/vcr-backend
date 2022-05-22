@@ -77,4 +77,17 @@ func AddPersonInfo(conn *pgx.Conn) {
 		json.NewEncoder(w).Encode(response)
 		w.WriteHeader(200)
 	})
+
+	http.HandleFunc("/get-persons", func(w http.ResponseWriter, r *http.Request) {
+		response, err := persons_info_controllers.GetPersons(conn)
+
+		if err != nil {
+			zap.L().Error(err.Error())
+			w.WriteHeader(500)
+			return
+		}
+
+		json.NewEncoder(w).Encode(response)
+		w.WriteHeader(200)
+	})
 }
