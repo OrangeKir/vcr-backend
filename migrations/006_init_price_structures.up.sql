@@ -2,7 +2,7 @@ CREATE TYPE price_type AS ENUM('Estimated', 'Fixed');
 
 CREATE TABLE price_structures
 (
-    id                    integer,
+    id                    serial,
     topic_number          integer,
     laboriousness         integer,
     basic_salary          integer,

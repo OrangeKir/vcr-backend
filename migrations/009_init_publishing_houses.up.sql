@@ -1,6 +1,6 @@
 CREATE TABLE publishing_houses
 (
-    id   integer,
+    id   serial,
     name varchar(256),
 
     primary key (id)

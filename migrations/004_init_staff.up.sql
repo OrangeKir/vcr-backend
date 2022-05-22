@@ -4,7 +4,7 @@ CREATE TYPE status_change_reason_type AS ENUM('Hired', 'Fired', 'Transfer');
 
 CREATE TABLE staff
 (
-    id                               integer,
+    id                               serial,
     person_login                     varchar(256),
     position                         varchar(256),
     working_rate                     float,

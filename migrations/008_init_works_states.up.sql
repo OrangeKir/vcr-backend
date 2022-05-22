@@ -1,6 +1,6 @@
 CREATE TABLE works_states
 (
-    id                 integer,
+    id                 serial,
     work_name          varchar(256),
     state_name         varchar(256),
     state_number       integer,

@@ -1,5 +1,6 @@
 CREATE TABLE standards
 (
+    id                serial,
     standard_type     varchar(256),
     basic_salary      integer,
     additional_salary integer,

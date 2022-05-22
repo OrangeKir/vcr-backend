@@ -1,6 +1,6 @@
 CREATE TABLE publications
 (
-    id                  integer,
+    id                  serial,
     publishing_house_id integer,
     topic_name          varchar(256),
 
@@ -10,7 +10,7 @@ CREATE TABLE publications
 
 create table publications_to_persons
 (
-    id             integer,
+    id             serial,
     person_login   varchar(256),
     publication_id integer,
 
