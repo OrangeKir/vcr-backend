@@ -49,6 +49,8 @@ func main() {
 	gateway_layer.AddDivisionInfo(conn)
 	gateway_layer.AddStaffInfo(conn)
 	gateway_layer.AddPriceStructureInfo(conn)
+	gateway_layer.AddPublicationsInfo(conn)
+	gateway_layer.AddConferencesInfo(conn)
 
 	http.ListenAndServe("localhost:6080", nil)
 }

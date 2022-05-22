@@ -5,10 +5,11 @@ type GetUserConferencesInfoRequest struct {
 }
 
 type GetUserConferencesInfoResponse struct {
-	Conferences []Conference
+	Conferences []UserConference
 }
 
-type Conference struct {
+type UserConference struct {
+	Id         int
 	Name       string
 	TopicNames []string
 }
