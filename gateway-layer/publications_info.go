@@ -92,18 +92,6 @@ func AddPublicationsInfo(conn *pgx.Conn) {
 		var request publications_info_models.GetUserPublicationsInfoByLoginRequest
 		json.NewDecoder(r.Body).Decode(&request)
 
-		//isValidToken, login, role := helpers.ValidateToken(request.Token)
-		//
-		//if !isValidToken {
-		//	w.WriteHeader(401)
-		//	return
-		//}
-		//
-		//if !(role == types.Administrator || login != request.Login) {
-		//	w.WriteHeader(403)
-		//	return
-		//}
-
 		response, err := publications_info_controllers.GetUserPublications(conn, request)
 
 		if err != nil {

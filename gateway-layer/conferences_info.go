@@ -10,7 +10,7 @@ import (
 )
 
 func AddConferencesInfo(conn *pgx.Conn) {
-	http.HandleFunc("/create-conference-house", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/create-conference", func(w http.ResponseWriter, r *http.Request) {
 		var request conferences_info_models.CreateConferenceRequest
 		json.NewDecoder(r.Body).Decode(&request)
 
@@ -91,18 +91,6 @@ func AddConferencesInfo(conn *pgx.Conn) {
 	http.HandleFunc("/get-user-conferences", func(w http.ResponseWriter, r *http.Request) {
 		var request conferences_info_models.GetUserConferencesInfoRequest
 		json.NewDecoder(r.Body).Decode(&request)
-
-		//isValidToken, login, role := helpers.ValidateToken(request.Token)
-		//
-		//if !isValidToken {
-		//	w.WriteHeader(401)
-		//	return
-		//}
-		//
-		//if !(role == types.Administrator || login != request.Login) {
-		//	w.WriteHeader(403)
-		//	return
-		//}
 
 		response, err := conferences_info_controllers.GetUserConferencesInfo(conn, request)
 
