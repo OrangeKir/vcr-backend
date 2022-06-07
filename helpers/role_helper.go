@@ -12,9 +12,7 @@ const authServerUrl = "http://localhost:5080/validate-token"
 
 func ValidateToken(tokenString string) (bool, string, types.Role) {
 	request := Request{Token: tokenString}
-
 	jsonBody, err := json.Marshal(request)
-
 	httpRequest, err := http.NewRequest("GET", authServerUrl, bytes.NewBuffer(jsonBody))
 
 	client := &http.Client{}

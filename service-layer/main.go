@@ -7,9 +7,10 @@ import (
 	"github.com/jackc/pgx/v4"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
+	"net/http"
 )
 
-const dbConnectionString = "postgres://dduzpxtujiiien:2bab6d135fa16753e26be65c4596c000e9e211c011fa92f72509bc0ddd4a46ba@ec2-176-34-211-0.eu-west-1.compute.amazonaws.com:5432/dcreheg4vihq8r"
+const dbConnectionString = "postgres://postgres:1@localhost:5432/vcr"
 
 func addDb() (*pgx.Conn, error) {
 	conn, err := pgx.Connect(context.Background(), dbConnectionString)
@@ -50,4 +51,6 @@ func main() {
 	gateway_layer.AddPriceStructureInfo(conn)
 	gateway_layer.AddPublicationsInfo(conn)
 	gateway_layer.AddConferencesInfo(conn)
+
+	http.ListenAndServe("localhost:6080", nil)
 }
